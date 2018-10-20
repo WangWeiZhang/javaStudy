@@ -1,0 +1,41 @@
+第二章
+a、书写hello world程序；
+b、java的三种注释；
+
+第一节课
+1、注释
+	单行注释：单行注释以// 开始，行末结束
+	多行注释：/**/
+	文档注释：简单使用命令 javadoc -d 生成目标路径 源文件(javadoc -d doc MyFirstJava.java)
+		/**
+		 * Description：这是我的第一个java程序
+		 * Author：王维璋
+		 * Create Date:2018-9-15
+		 * Modified Date:2018-10-3
+		 * Modified By:Mr Sun
+		 */
+		public class MyFirstJava{
+			/**
+			 * Description：这是java程序的入口
+			 * 参数：字符串数组
+			 */
+			public static void main(String []args) {
+				//打印输出到控制台
+				System.out.println("hello world!");
+				// \n 转意符号 换行
+				System.out.print("hello world!\n");
+				System.out.println("hello world!");
+				// \t 转意符号 tab 空格
+				System.out.println("hello wor\tld");
+			}
+			
+			/**
+			 * Description：显示输出个人的信息
+			 * @return String 姓名
+			 * @param content 个人资料
+			 */
+			public String toString(String content) {
+				
+			}
+		}
+	

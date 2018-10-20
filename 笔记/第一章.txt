@@ -1,0 +1,52 @@
+第一章：
+
+
+命令：
+set path 查看设置的环境变量
+
+第一节课：环境搭建
+	JRE和JDK的概念；JRE java的运行环境 JDK java的程序开发包（包含jre）
+	JDK的下载和剖析
+	Java开发环境配置：配置环境变量；在系统变量的path中添加
+
+第二节课：编写简单java程序
+
+1、java程序开发步骤
+	同构文本编辑器来编写java代码至扩展名为java的文件中。
+	调用编译工具javac.exe来对java源文件进行编译，生成扩展名为class的字节码文件；
+	调用运行工具java.exe来对编译好的字节码文件进行解释执行
+2、java源程序的结构
+	java最小运行单位是一个“ 类 ”，java程序都封装在一个类里面；
+	
+	类的声明：class关键字声明类
+		public class MyFirstApp {
+			public static void main () {
+				System.out.println("hello world!");
+			}
+		}
+		public 公开给其他类来 存取；(不加入public的时候，类名和文件名不一致执行不会报错，加上之后强制要求类名和文件名必须一致)
+		MyFirstApp 是一个类名 ，首字母大写，驼峰法；
+		public static void main() {} 程序的入口点
+		println();打印内容之后换行
+		print();打印内容之后不换行
+		\n:换行 print("hello!\n");
+		
+	
+	运行java
+		a、使用javac.exe 将java文件编译成.class字节码文件
+		b、使用java.exe 将字节码文件放入虚拟机中运行
+		注意：.java源文件的文件名，最好和类名一致。这样可以保证javac编译字节码文件和java放入虚拟机中的类文件名一致，避免出错。
+			  public 公开给其他类来 存取；(不加入public的时候，类名和文件名不一致执行不会报错，加上之后强制要求类名和文件名必须一致)
+			  
+		注意：一个java源文件中，只允许出现一个public class；可以出现多个class。（不推荐这样写，不利于维护）
+		
+	配置classpath
+		临时性 classpath 路径
+			set classpath=e:\javaStudy\one
+		永久性 classpath 路径
+		设置classpath变量值可以实现在任意目录下都可以执行某一个目录下的class字节码文件文件；
+		注意：path变量和classpath变量的qubie
+			path变量是设置windows执行文件的目录.exe，而classpath设置的是java类文件(.class)字节码文件的目录，执行的也是java的类文件；
+
+
+			
