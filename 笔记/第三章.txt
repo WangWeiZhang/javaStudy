@@ -1,0 +1,96 @@
+﻿第三章 
+为什么需要变量？什么是变量？
+变量的声明和使用？
+标识符命名规则？
+
+
+1、变量
+	为什么需要变量？
+		a、程序的运行需要获得数据进行计算
+			程序：指令的集合（比如班级的学生集合）
+				a、获取贝格学员的分数
+				b、对分数进行求和
+				c、和➗人数=平均分	
+			每一条的实现可能是多条指令。这个多个实现是一个算法过程；
+			所以：算法+数据 = 程序； 算法+数据结构 = 程序；
+		b、存储数据 获得数据需要 内存
+			程序员存入数据是第一步；还应该考虑怎样获得数据；存入的数据能否修改；
+			
+	什么是变量？
+		变量就是数据存储空间的表示；是一块存储区域；访问区域；
+		
+	声明变量和使用
+		步骤：
+			第一步：声明一个变量以分配空间（根据数据类型分配空间的大小）。int a; 整型变量；
+			第二部：为变量赋值；a = 20;(将数据存入了空间)
+			第三步：使用变量；System.out.print(a);
+
+2、标识符命名规则：取名字的地方都可以称之为标识符。
+	变量名 = 首字符 + 其余部分；
+		*首字符：字母、下划线、$
+		*其余部分：数字 字母 下划线 $
+	变量名
+		*应该必开关键字； int int = 10; 会报错
+	变量名
+		*符合驼峰法
+		*若由多个单词组成，从第二个开始，首字母均大写； mySource
+		*简单明了表示变量的作用，首字母小写； mySource
+
+3、关键字（保留字）
+	java有51哥关键字，不能使用保留关键字来命名类，方法或变量；
+	
+	
+	举例说明
+	
+		//先声明后赋值
+		//int number;
+		//number = 10;
+		//System.out.println(number);
+		
+		//声明的同时赋值
+		//int dataOne = 20;
+		//System.out.println(dataOne);
+		
+		//声明一个变量必须给其值之后才能使用；
+		/*int dataTwo;
+		System.out.println(dataTwo);*/
+		
+		//同时声明多个变量
+		//int data3, data4, data5 = 100;
+		//System.out.println(data3); // 错误: 可能尚未初始化变量data3 上面同时声明的多个变量只有data5赋值了；
+		//System.out.println(data5);
+		
+		//连续等号
+		//int data3=data4=data5 = 100; //找不到符号，报错
+		
+		//正确的方式 声明多个 赋值多个
+		//int data6 = 6,data7 = 7, data8 = 80;
+		//System.out.println(data6); // 6
+		//System.out.println(data7); // 7
+		//System.out.println(data8); // 80
+		
+		//不能声明同名变量，也就是不能重复声明 ；
+		//int data6 = 8; //报错
+		
+		//关键字不能当作变量名
+		//int final = 20;
+		//System.out.println(final);//报错
+		
+		//变量名区分大小写
+		int mySocre = 20;
+		int mysocre = 30;
+		System.out.println(mySocre); //20
+		System.out.println(mysocre); //30
+		
+		//变量名字可以修改
+		int mySocre = 20;
+		int mysocre = 30;
+			mySocre = 40;
+			mysocre = 50;
+		System.out.println(mySocre); //40
+		System.out.println(mysocre); //50
+
+
+			
+	
+	
