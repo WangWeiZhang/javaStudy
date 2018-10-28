@@ -31,3 +31,109 @@
 		  ++       数学自增运算  x=1;x++      2
 		  --       数学自减运算  x=1;x--      0
 		  
+		强调：字符串加任何数据类型都是字符串连接；
+		  
+	b、赋值运算符
+		*赋值运算符
+			通用的形式：变量名=表达式； 等号右边可以是数字，也可以是表达式，最后赋值给变量；
+		*符合赋值运算符
+		运算符        表达式       计算           结果（假设x=10）
+		  +=           x+=5        x=x+5            15
+  		  -=           x-=5        x=x-5            5
+		  *=           x*=5        x=x*5            50
+		  /=           x/=5        x=x/5            2
+		  %=           x%=5        x=x%5            0
+		提示：还可以和位运算符构成复合赋值运算符，例如：^=、<<=等；
+	
+	c、关系运算符（比较）返回布尔类型
+		运算符         表达式       计算           结果
+		  ==           相等于       1==1           true
+  		  !=           不等于       1!=1           false
+		  >            大于         1>1            false
+		  <            小于         1<2            true
+		  >=           大于等于     1>=2           false
+		  <=           小于等于     1<=2           true
+		提示：关系运算符的结果就是布尔类型的值；
+		
+		
+		
+	课程总结：
+		*表达式概念
+		*算术运算符
+		*赋值运算符
+		*关系运算符
+		
+		
+	public class SixDemo{
+		public static void main(String [] args){
+			int num1=10;
+			int num2=8;
+			int res=num1+num2;
+			System.out.println(res);
+			String str="操作结果：";//不是基本数据类型， 引用数据类型（堆内存里），而str变量在栈里面，指向堆里面的内存空间；
+			System.out.println(str+res);//字符串连接
+			System.out.println(str+res+10);//字符串连接 从左往右 操作结果：1810
+			System.out.println(str+(res+10));//先算数字相加，在连接
+			System.out.println(str+res+10.5);// 操作结果：1810.5
+			System.out.println(str+res+'男');// 操作结果：18男
+			System.out.println(str+res+true);// 操作结果：18true
+			System.out.println(res+10+str);//   28操作结果：
+			
+			//System.out.println(str+num1-num2);//错误 减号智能做数字运算
+			System.out.println(str+(num1-num2));//操作结果：2
+			System.out.println(str+(num1*num2));//操作结果：80
+			System.out.println(str+(num1/num2));//操作结果：1
+			System.out.println(str+(num1%num2));//操作结果：2
+			
+			//num1++;
+			++num1;
+			//当单独使用++的时候，不管++在前面还是后面都是自身加一
+			System.out.println(num1);
+			
+			//--num1
+			--num1;
+			System.out.println(num1);
+			
+			int data=++num1;
+			//相当于 num1++; int data=num1;
+			//当有赋值运算符的时候，++在前面，那么会先自增加一，在做赋值运算；
+			
+			//int data=num1++;
+			//相当于int data=num1; num1++;
+			//当有赋值运算符的时候，++在后面，那么会先赋值，然后在自身加一；
+			System.out.println("res="+data+",num1="+num1);
+			
+			num2+=2;//num2=num2+2;
+			System.out.println("num2="+num2);
+			
+			short s=5;
+			//s=s+3;
+			s+=3;
+			System.out.println("s="+s);
+			
+			//关系运算符
+			System.out.println(num1==num2);
+			System.out.println(num1>num2);
+		}
+	}
+	
+2、运算符
+	*逻辑运算符
+	*位运算符
+	*运算符的优先级
+	
+	逻辑运算符
+		运算符			说明			表达式			描述
+		  &&		   短路与		 条件1&&条件2	仅仅两个条件都为真，结果才为真。若1为假，则不判断2，直接返回假的；
+		  ||		   短路或        条件1||条件2   只要两个条件中有一个为真，结果就为真。若1为真，则不判断2；
+		  ！             非			    ！条件		条件为真时，结果为假；条件为假时，结果是真的；
+		  
+		  &				 与			 条件1&条件2    仅仅两个条件都为真，结果才为真。若1为假，则2还需要判断；
+		  |              或          条件1|条件2	只要两个条件中有一个为真，结果就为真。若1为真，2还需要判断；
+		  ^				异或		 条件1^条件2    当一个为真时，一个为假时，结果为真； 
+	
+	
+
+		
+		
+			
